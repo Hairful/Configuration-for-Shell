@@ -11,6 +11,9 @@ call plug#end()
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+" <ESC> key mapping
+inoremap ff <ESC> 
+
 "rainbow
 let g:rainbow_active = 1
 
