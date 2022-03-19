@@ -404,6 +404,9 @@ au BufRead,BufNewFile *  setfiletype txt
 
 set completeopt=longest,menu
 
+set pastetoggle=<F9>
+" 按下<F9>进入/退出缩进模式
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " CTags的设定  
