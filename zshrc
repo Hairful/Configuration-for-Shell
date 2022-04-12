@@ -143,3 +143,10 @@ export LANG=en_US.UTF-8
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# java environment
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# aapt PATH
+export AAPT_HOME=/Users/allen/Library/Android/sdk/build-tools/32.0.0
+export PATH=$PATH:$AAPT_HOME
