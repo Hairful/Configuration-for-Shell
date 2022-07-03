@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
@@ -7,6 +6,7 @@ Plug 'luochen1990/rainbow'
 Plug 'dense-analysis/ale'
 Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
+Plug 'vim-python/python-syntax'
 call plug#end()
 
 " nerdtree
@@ -127,38 +127,33 @@ map <F3> :tabnew .<CR>
 
 map <C-F3> \be  
 
-"C，C++ 按F5编译运行
-
+"Quickly Run
+""""""""""""""""""""""
 map <F5> :call CompileRunGcc()<CR>
-
 func! CompileRunGcc()
-
     exec "w"
-
     if &filetype == 'c'
-
         exec "!g++ % -o %<"
-
-        exec "! ./%<"
-
+        exec "!time ./%<"
     elseif &filetype == 'cpp'
-
         exec "!g++ % -o %<"
-
-        exec "! ./%<"
-
-    elseif &filetype == 'java' 
-
-        exec "!javac %" 
-
-        exec "!java %<"
-
+        exec "!time ./%<"
+    elseif &filetype == 'java'
+        exec "!javac %"
+        exec "!time java %<"
     elseif &filetype == 'sh'
-
-        :!./%
-
+        :!time bash %
+    elseif &filetype == 'python'
+        exec "!time python3 %"
+    elseif &filetype == 'html'
+        exec "!firefox % &"
+    elseif &filetype == 'go'
+"        exec "!go build %<"
+        exec "!time go run %"
+    elseif &filetype == 'mkd'
+        exec "!~/.vim/markdown.pl % > %.html &"
+        exec "!firefox %.html &"
     endif
-
 endfunc
 
 "C,C++的调试
@@ -579,3 +574,15 @@ endfunc
 
 " SuperTab
 let g:SuperTabDefaultCompletionType="context" 
+
+" undo history
+set undodir=~/.vim/undo/
+set undofile
+set undolevels=1000
+set undoreload=10000
+
+" pydiction
+let g:pydiction_location = '~/.vim/after/complete-dict'
+let g:pydiction_menu_height = 20
+
+let g:python_highlight_all = 1
