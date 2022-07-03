@@ -150,3 +150,6 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # aapt PATH
 export AAPT_HOME=/Users/allen/Library/Android/sdk/build-tools/32.0.0
 export PATH=$PATH:$AAPT_HOME
+
+# python PATH
+export PATH=$PATH:/Users/allen/Library/Python/3.10/bin/
