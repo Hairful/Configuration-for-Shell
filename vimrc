@@ -6,6 +6,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
 Plug 'dense-analysis/ale'
 Plug 'bling/vim-airline'
+Plug 'ervandew/supertab'
 call plug#end()
 
 " nerdtree
@@ -575,3 +576,6 @@ func SetTitle()
 endfunc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" SuperTab
+let g:SuperTabDefaultCompletionType="context" 
