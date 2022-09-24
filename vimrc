@@ -535,7 +535,7 @@ func SetTitle()
 
         call append(line(".")+2, "    > Created Time: ".strftime("%c"))
 		
-		call append(line(".")+3, "    > Created by Vim - Vi IMproved 8.2 ; UTF-8")
+		call append(line(".")+3, "    > Created by Vim - Vi IMproved; UTF-8")
 
         call append(line(".")+4," ************************************************************************/")
 
