@@ -7,6 +7,7 @@ Plug 'dense-analysis/ale'
 Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
 Plug 'vim-python/python-syntax'
+Plugin 'nathanaelkane/vim-indent-guides'
 call plug#end()
 
 " nerdtree
