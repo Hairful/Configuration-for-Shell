@@ -584,3 +584,8 @@ let g:pydiction_location = '~/.vim/after/complete-dict'
 let g:pydiction_menu_height = 20
 
 let g:python_highlight_all = 1
+
+" open indent guide Line
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
