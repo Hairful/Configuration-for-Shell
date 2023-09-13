@@ -589,3 +589,6 @@ let g:python_highlight_all = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
+
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
