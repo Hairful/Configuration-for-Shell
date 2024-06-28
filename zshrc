@@ -166,4 +166,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+#
+PATH=~/.npm-global/bin:$PATH
